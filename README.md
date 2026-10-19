@@ -123,7 +123,7 @@ $$\text{Response Score} = 100 \times (0.50 \times \text{IncidentSeverity} + 0.30
 ### 1. Database Setup
 The backend automatically connects to MySQL. If not already created:
 ```bash
-"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p"Amogh@123" -e "CREATE DATABASE IF NOT EXISTS unheard_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p"your_password" -e "CREATE DATABASE IF NOT EXISTS unheard_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 ```
 
 ### 2. Start Spring Boot Backend
