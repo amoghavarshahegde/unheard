@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+  .card-sm {
+    @apply bg-gray-900 border border-gray-800 rounded-lg p-3;
+  }
+  .btn-primary {
+    @apply bg-ops-600 hover:bg-ops-700 text-white font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .btn-danger {
+    @apply bg-emergency-600 hover:bg-emergency-700 text-white font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .btn-ghost {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-200 font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .badge-critical {
+    @apply bg-emergency-900 text-emergency-300 border border-emergency-700 text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  .badge-high {
+    @apply bg-orange-900 text-orange-300 border border-orange-700 text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  .badge-medium {
+    @apply bg-yellow-900 text-yellow-300 border border-yellow-700 text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  .badge-low {
+    @apply bg-gray-800 text-gray-400 border border-gray-700 text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  .badge-green {
+    @apply bg-emerald-900 text-emerald-300 border border-emerald-700 text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  .freshness-green {
+    @apply inline-block w-2 h-2 rounded-full bg-emerald-500;
+  }
+  .freshness-yellow {
+    @apply inline-block w-2 h-2 rounded-full bg-yellow-500;
+  }
+  .freshness-red {
+    @apply inline-block w-2 h-2 rounded-full bg-red-500 animate-pulse;
+  }
+}
+
+/* Leaflet overrides for dark theme */
+.leaflet-container {
+  background: #111827 !important;
+  font-family: inherit !important;
+}
+.leaflet-tile {
+  filter: brightness(0.7) saturate(0.8);
+}

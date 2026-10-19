@@ -1,0 +1,87 @@
+package com.unheard.dto;
+
+import java.time.LocalDateTime;
+
+public class CoordinatorDecisionDto {
+    private Long id;
+    private Long recommendationId;
+    private String decision;
+    private String reason;
+    private Long assignedResourceId;
+    private Integer overriddenRank;
+    private LocalDateTime decidedAt;
+    private String decidedBy;
+    private Double originalScore;
+    private Integer originalRank;
+
+    public CoordinatorDecisionDto() {}
+
+    public CoordinatorDecisionDto(Long id, Long recommendationId, String decision, String reason,
+                                  Long assignedResourceId, Integer overriddenRank, LocalDateTime decidedAt,
+                                  String decidedBy, Double originalScore, Integer originalRank) {
+        this.id = id;
+        this.recommendationId = recommendationId;
+        this.decision = decision;
+        this.reason = reason;
+        this.assignedResourceId = assignedResourceId;
+        this.overriddenRank = overriddenRank;
+        this.decidedAt = decidedAt;
+        this.decidedBy = decidedBy;
+        this.originalScore = originalScore;
+        this.originalRank = originalRank;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Long id;
+        private Long recommendationId;
+        private String decision;
+        private String reason;
+        private Long assignedResourceId;
+        private Integer overriddenRank;
+        private LocalDateTime decidedAt;
+        private String decidedBy;
+        private Double originalScore;
+        private Integer originalRank;
+
+        public Builder id(Long id) { this.id = id; return this; }
+        public Builder recommendationId(Long recommendationId) { this.recommendationId = recommendationId; return this; }
+        public Builder decision(String decision) { this.decision = decision; return this; }
+        public Builder reason(String reason) { this.reason = reason; return this; }
+        public Builder assignedResourceId(Long assignedResourceId) { this.assignedResourceId = assignedResourceId; return this; }
+        public Builder overriddenRank(Integer overriddenRank) { this.overriddenRank = overriddenRank; return this; }
+        public Builder decidedAt(LocalDateTime decidedAt) { this.decidedAt = decidedAt; return this; }
+        public Builder decidedBy(String decidedBy) { this.decidedBy = decidedBy; return this; }
+        public Builder originalScore(Double originalScore) { this.originalScore = originalScore; return this; }
+        public Builder originalRank(Integer originalRank) { this.originalRank = originalRank; return this; }
+
+        public CoordinatorDecisionDto build() {
+            return new CoordinatorDecisionDto(id, recommendationId, decision, reason, assignedResourceId,
+                    overriddenRank, decidedAt, decidedBy, originalScore, originalRank);
+        }
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public Long getRecommendationId() { return recommendationId; }
+    public void setRecommendationId(Long recommendationId) { this.recommendationId = recommendationId; }
+    public String getDecision() { return decision; }
+    public void setDecision(String decision) { this.decision = decision; }
+    public String getReason() { return reason; }
+    public void setReason(String reason) { this.reason = reason; }
+    public Long getAssignedResourceId() { return assignedResourceId; }
+    public void setAssignedResourceId(Long assignedResourceId) { this.assignedResourceId = assignedResourceId; }
+    public Integer getOverriddenRank() { return overriddenRank; }
+    public void setOverriddenRank(Integer overriddenRank) { this.overriddenRank = overriddenRank; }
+    public LocalDateTime getDecidedAt() { return decidedAt; }
+    public void setDecidedAt(LocalDateTime decidedAt) { this.decidedAt = decidedAt; }
+    public String getDecidedBy() { return decidedBy; }
+    public void setDecidedBy(String decidedBy) { this.decidedBy = decidedBy; }
+    public Double getOriginalScore() { return originalScore; }
+    public void setOriginalScore(Double originalScore) { this.originalScore = originalScore; }
+    public Integer getOriginalRank() { return originalRank; }
+    public void setOriginalRank(Integer originalRank) { this.originalRank = originalRank; }
+}
